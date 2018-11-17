@@ -52,7 +52,7 @@ public class OrderBook extends Thread implements AutoCloseable {
 
     private void tryMatch() {
         Order sell, buy;
-        while (comparar() == true) {
+        while (comparar()) {
             lock.writeLock().lock();
             sell = sellOrders.peek();
             buy = buyOrders.peek();
@@ -99,10 +99,10 @@ public class OrderBook extends Thread implements AutoCloseable {
     @Override
     public void close()  {
         if (closed) return;
+        closed = true;
         executorService.shutdown();
         try {
             executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.SECONDS);
-            closed = true;
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
