@@ -15,8 +15,10 @@ public class OrderBook extends Thread implements AutoCloseable {
     public final @Nonnull TransactionProcessor transactionProcessor;
     public final @Nonnull PriorityQueue<Order> sellOrders, buyOrders;
     private boolean closed = false;
-    public ReentrantLock lock = new ReentrantLock();
+    private ReentrantLock lock = new ReentrantLock();
+    private Lock closedLock = new ReentrantLock();
     ExecutorService executorService = Executors.newCachedThreadPool();
+    ExecutorService tryMatchExecutor = Executors.newCachedThreadPool();
 
     public OrderBook(@Nonnull String stockCode,
                      @Nonnull TransactionProcessor transactionProcessor) {
@@ -36,20 +38,37 @@ public class OrderBook extends Thread implements AutoCloseable {
         });
     }
 
+    private boolean comparaClosed(){
+        closedLock.lock();
+        if(closed) {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
     public synchronized void post(@Nonnull Order order) {
         if (!order.getStock().equals(stockCode)) {
             String msg = toString() + " cannot process orders for " + order.getStock();
             throw new IllegalArgumentException(msg);
         }
-        if (closed) {
+        if (comparaClosed()) {
+            closedLock.unlock();
             order.notifyCancellation();
             return;
         }
+        closedLock.unlock();
         lock.lock();
         (order.getType() == BUY ? buyOrders : sellOrders).add(order);
         lock.unlock();
         order.notifyQueued();
-        tryMatch();
+        tryMatchExecutor.execute(new Runnable() {
+            @Override
+            public void run() {
+                tryMatch();
+            }
+        });
     }
 
     private void tryMatch() {
@@ -66,12 +85,12 @@ public class OrderBook extends Thread implements AutoCloseable {
             final Order finalSell = sell;
             final Order finalBuy = buy;
             if (finalSell.getPrice() <= finalBuy.getPrice()) {
+                finalSell.notifyProcessing();
+                finalBuy.notifyProcessing();
                 executorService.execute(new Runnable() {
                     @Override
                     public void run() {
                         Transaction trans = new Transaction(finalSell, finalBuy);
-                        finalSell.notifyProcessing();
-                        finalBuy.notifyProcessing();
                         transactionProcessor.process(OrderBook.this, trans);
                     }
                 });
@@ -98,8 +117,12 @@ public class OrderBook extends Thread implements AutoCloseable {
 
     @Override
     public void close()  {
-        if (closed) return;
+        if (comparaClosed()){
+            closedLock.unlock();
+            return;
+        }
         closed = true;
+        closedLock.unlock();
         executorService.shutdown();
         try {
             executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.SECONDS);
@@ -112,5 +135,11 @@ public class OrderBook extends Thread implements AutoCloseable {
         sellOrders.clear();
         for (Order order : buyOrders) order.notifyCancellation();
         buyOrders.clear();
+        tryMatchExecutor.shutdown();
+        try {
+            tryMatchExecutor.awaitTermination(Long.MAX_VALUE, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

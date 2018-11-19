@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="39b24e49-beef-4287-86c9-4ce82a2bf57a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/OrderBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/OrderBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/ufsc/ine5410/trade/OrderBook$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/ufsc/ine5410/trade/OrderBook$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/ufsc/ine5410/trade/OrderBook$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/ufsc/ine5410/trade/OrderBook$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/ufsc/ine5410/trade/OrderBook$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/ufsc/ine5410/trade/OrderBook$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/ufsc/ine5410/trade/OrderBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/ufsc/ine5410/trade/OrderBook.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,37 +20,38 @@
     <session id="-869457315">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.57" value="1" />
           <entry key="project.open.time.60" value="1" />
           <entry key="project.open.time.78" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="20" />
+          <entry key="java" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="20" />
+          <entry key="JAVA" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="836" />
+          <entry key="JAVA" value="1667" />
           <entry key="PLAIN_TEXT" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="836" />
+          <entry key="java" value="1667" />
           <entry key="txt" value="26" />
         </counts>
       </usages-collector>
@@ -56,7 +62,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="1575">
               <caret line="132" selection-start-line="132" selection-end-line="132" />
             </state>
           </provider>
@@ -74,8 +80,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/OrderBook.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="85" column="20" lean-forward="true" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+            <state relative-caret-position="500">
+              <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
+              <folding>
+                <element signature="e#2410#2532#0" expanded="true" />
+                <element signature="e#2531#2532#0" expanded="true" />
+                <element signature="e#3770#4166#0" expanded="true" />
+                <element signature="e#4165#4166#0" expanded="true" />
+                <element signature="e#4349#4350#0" expanded="true" />
+                <element signature="e#4413#4414#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,17 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/Exchange.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
+            <state relative-caret-position="307">
               <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/br/ufsc/ine5410/OrderBookTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="82" selection-start-line="82" selection-end-line="82" />
             </state>
           </provider>
         </entry>
@@ -186,15 +191,6 @@
               <item name="t2" type="b2602c69:ProjectViewProjectNode" />
               <item name="t2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ine5410" type="462c0819:PsiDirectoryNode" />
-              <item name="trade" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="t2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="t2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -222,7 +218,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542494527058" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542671166720" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -318,8 +314,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Android JUnit.TransactionProcessorTest" />
         <item itemvalue="Android JUnit.OrderBookTest" />
+        <item itemvalue="Android JUnit.TransactionProcessorTest" />
         <item itemvalue="JUnit.TransactionProcessorTest" />
         <item itemvalue="JUnit.OrderBookTest" />
       </list>
@@ -350,45 +346,60 @@
       <option name="project" value="LOCAL" />
       <updated>1542644385023</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Consertando">
+      <created>1542644649546</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1542644649546</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Consertando">
+      <created>1542644745597</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1542644745597</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TransactionProcessorTest - 2018.11.15 at 09h 25m 25s.xml">
-      <configuration name="TransactionProcessorTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="OrderBookTest - 2018.11.15 at 09h 30m 14s.xml">
+    <history-entry file="OrderBookTest - 2018.11.19 at 21h 34m 11s.xml">
       <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="OrderBookTest - 2018.11.15 at 10h 09m 04s.xml">
-      <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="OrderBookTest - 2018.11.17 at 19h 56m 25s.xml">
-      <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="TransactionProcessorTest - 2018.11.17 at 19h 56m 35s.xml">
+    <history-entry file="TransactionProcessorTest - 2018.11.19 at 21h 35m 30s.xml">
       <configuration name="TransactionProcessorTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="TransactionProcessorTest - 2018.11.17 at 19h 56m 43s.xml">
-      <configuration name="TransactionProcessorTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="OrderBookTest - 2018.11.17 at 20h 25m 41s.xml">
+    <history-entry file="OrderBookTest - 2018.11.19 at 21h 35m 41s.xml">
       <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="TransactionProcessorTest - 2018.11.17 at 20h 25m 51s.xml">
-      <configuration name="TransactionProcessorTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="OrderBookTest - 2018.11.19 at 13h 44m 40s.xml">
+    <history-entry file="OrderBookTest - 2018.11.19 at 21h 37m 22s.xml">
       <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="TransactionProcessorTest - 2018.11.19 at 13h 44m 49s.xml">
-      <configuration name="TransactionProcessorTest" configurationId="AndroidJUnit" />
+    <history-entry file="OrderBookTest - 2018.11.19 at 21h 37m 46s.xml">
+      <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="OrderBookTest - 2018.11.19 at 21h 38m 55s.xml">
+      <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="OrderBookTest - 2018.11.19 at 21h 40m 01s.xml">
+      <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="OrderBookTest - 2018.11.19 at 21h 42m 47s.xml">
+      <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="OrderBookTest - 2018.11.19 at 21h 43m 52s.xml">
+      <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="OrderBookTest - 2018.11.19 at 21h 45m 55s.xml">
+      <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1360" height="719" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27929986" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28386605" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -403,9 +414,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="8" sideWeight="0.50076103" side_tool="true" visible="true" weight="0.32879046" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50076103" side_tool="true" weight="0.32879046" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32879046" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49923897" visible="true" weight="0.32879046" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49923897" weight="0.32879046" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -484,7 +495,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="1575">
           <caret line="132" selection-start-line="132" selection-end-line="132" />
         </state>
       </provider>
@@ -496,24 +507,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/Exchange.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/ufsc/ine5410/OrderBookTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+        <state relative-caret-position="307">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/br/ufsc/ine5410/OrderBookTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/Exchange.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        <state relative-caret-position="307">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/OrderBook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="85" column="20" lean-forward="true" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+        <state relative-caret-position="500">
+          <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
+          <folding>
+            <element signature="e#2410#2532#0" expanded="true" />
+            <element signature="e#2531#2532#0" expanded="true" />
+            <element signature="e#3770#4166#0" expanded="true" />
+            <element signature="e#4165#4166#0" expanded="true" />
+            <element signature="e#4349#4350#0" expanded="true" />
+            <element signature="e#4413#4414#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
