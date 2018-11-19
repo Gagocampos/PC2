@@ -15,7 +15,7 @@ public class OrderBook extends Thread implements AutoCloseable {
     public final @Nonnull TransactionProcessor transactionProcessor;
     public final @Nonnull PriorityQueue<Order> sellOrders, buyOrders;
     private boolean closed = false;
-    public ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
+    public ReentrantLock lock = new ReentrantLock();
     ExecutorService executorService = Executors.newCachedThreadPool();
 
     public OrderBook(@Nonnull String stockCode,
@@ -45,7 +45,9 @@ public class OrderBook extends Thread implements AutoCloseable {
             order.notifyCancellation();
             return;
         }
+        lock.lock();
         (order.getType() == BUY ? buyOrders : sellOrders).add(order);
+        lock.unlock();
         order.notifyQueued();
         tryMatch();
     }
@@ -53,14 +55,13 @@ public class OrderBook extends Thread implements AutoCloseable {
     private void tryMatch() {
         Order sell, buy;
         while (comparar()) {
-            lock.writeLock().lock();
             sell = sellOrders.peek();
             buy = buyOrders.peek();
             Order removed = sellOrders.remove();
             assert removed == sell;
             removed = buyOrders.remove();
             assert removed == buy;
-            lock.writeLock().unlock();
+            lock.unlock();
 
             final Order finalSell = sell;
             final Order finalBuy = buy;
@@ -77,16 +78,15 @@ public class OrderBook extends Thread implements AutoCloseable {
             } else {
                 break;
             }
-        }
+        }if(lock.isLocked())
+            lock.unlock();
     }
 
     private boolean comparar(){
-        lock.readLock().lock();
+        lock.lock();
         if(sellOrders.peek() != null && buyOrders.peek() != null){
-            lock.readLock().unlock();
             return true;
         }else{
-            lock.readLock().unlock();
             return false;
         }
     }

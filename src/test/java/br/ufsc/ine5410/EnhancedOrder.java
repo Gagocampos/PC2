@@ -10,9 +10,19 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 public class EnhancedOrder extends Order {
+    long processedCount;
+
     public EnhancedOrder(@Nonnull Investor investor, @Nonnull Broker broker, @Nonnull Type type, @Nonnull String code, double price) {
         super(investor, broker, type, code, price);
         addListener(new Listener() {
+            @Override
+            public void processing(Order order) {
+                synchronized (EnhancedOrder.this) {
+                    processedCount += 1;
+                    EnhancedOrder.this.notifyAll();
+                }
+            }
+
             @Override
             public void executed(Order order) {
                 synchronized (EnhancedOrder.this) {
@@ -27,6 +37,17 @@ public class EnhancedOrder extends Order {
                 }
             }
         });
+    }
+
+    public synchronized void waitProcessing(long value, TimeUnit timeUnit)
+            throws InterruptedException, TimeoutException {
+        long oldCount = this.processedCount;
+        StopWatch watch = StopWatch.createStarted();
+        long milliseconds = TimeUnit.MILLISECONDS.convert(value, timeUnit);
+        while (processedCount == oldCount && watch.getTime() < milliseconds)
+            wait(Math.max(0, milliseconds - watch.getTime()));
+        if (!isTerminated())
+            throw new TimeoutException();
     }
 
     public synchronized void waitTerminated(long value, TimeUnit timeUnit)

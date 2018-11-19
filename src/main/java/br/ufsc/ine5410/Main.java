@@ -51,7 +51,7 @@ public class Main  {
     @Option(name = "--proportion", aliases = {"-p"}, usage = "Dispara apenas " +
             "essa proporção do número de negócios executados no dia de referência " +
             "(de acordo com --source). O padrão é disparar apenas 5% do total de ordens")
-    private double postProportion = 0.05;
+    private double postProportion = 0.03;
 
     @Option(name = "--single-stock", aliases = {"-o"},
             usage = "Apenas uma ação será negociada, ao invés de 20")
@@ -198,7 +198,7 @@ public class Main  {
         }
 
         public void dispatch(Order.Type type, int investorIdx) {
-            double delta = (type == SELL ? -1 : 1) * Math.ceil(Math.random() * 200)/100;
+            double delta = (type == SELL ? -1 : 1) * (0.1 + Math.ceil(Math.random() * 200)/100);
             Investor investor = investors.get(investorIdx);
             double orderPrice = this.price + delta;
             Order order = new Order(investor, brokerOf.get(investor), type,
@@ -222,6 +222,13 @@ public class Main  {
             issued.incrementAndGet();
             order.addListener(new Order.Listener() {
                 @Override
+                public void processing(Order order) {
+                    try {
+                        Thread.sleep(0, 1000);
+                    } catch (InterruptedException ignored) {}
+                }
+
+                @Override
                 public void executed(@Nonnull Order order) {
                     executed.incrementAndGet();
                     active.remove(order);
@@ -242,6 +249,10 @@ public class Main  {
             } catch (NoSuchStockException e) {
                 throw new RuntimeException(e);
             }
+
+            try {
+                Thread.sleep(0, 1000);
+            } catch (InterruptedException ignored) {}
         }
     }
 }

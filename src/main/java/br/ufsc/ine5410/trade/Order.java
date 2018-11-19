@@ -30,6 +30,7 @@ public class Order {
     }
 
     public interface Listener {
+        void processing(Order order);
         void executed(Order order);
         void cancelled(Order order);
     }
@@ -108,6 +109,10 @@ public class Order {
 
     public void notifyProcessing() {
         state = State.PROCESSING;
+        synchronized (listeners) {
+            for (Listener listener : listeners)
+                listener.processing(this);
+        }
     }
 
     public void notifyExecution() {

@@ -63,11 +63,11 @@ public class TransactionProcessorTest extends OrderBookTestBase {
         Assert.assertEquals(1000, accounts.get(1).getBalance(), 0);
 
         //ordem de compra deve voltar para a fila...
-        Assert.assertNotEquals(transaction.getBuy().getState(), EXECUTED);
-        Assert.assertNotEquals(transaction.getBuy().getState(), CANCELLED);
+        Assert.assertNotEquals(EXECUTED, transaction.getBuy().getState());
+        Assert.assertNotEquals(CANCELLED, transaction.getBuy().getState());
 
         //ordem de venda deve ser cancelada
-        Assert.assertEquals(transaction.getSell().getState(), CANCELLED);
+        Assert.assertEquals(CANCELLED, transaction.getSell().getState());
     }
 
     @Test
