@@ -4,10 +4,6 @@
     <list default="true" id="39b24e49-beef-4287-86c9-4ce82a2bf57a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/OrderBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/OrderBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/ufsc/ine5410/trade/OrderBook$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/ufsc/ine5410/trade/OrderBook$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/ufsc/ine5410/trade/OrderBook$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/ufsc/ine5410/trade/OrderBook$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/ufsc/ine5410/trade/OrderBook$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/ufsc/ine5410/trade/OrderBook$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/ufsc/ine5410/trade/OrderBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/ufsc/ine5410/trade/OrderBook.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,31 +24,32 @@
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.57" value="1" />
           <entry key="project.open.time.60" value="1" />
+          <entry key="project.open.time.61" value="1" />
           <entry key="project.open.time.78" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="21" />
+          <entry key="java" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="21" />
+          <entry key="JAVA" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1667" />
-          <entry key="PLAIN_TEXT" value="26" />
+          <entry key="JAVA" value="1770" />
+          <entry key="PLAIN_TEXT" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1667" />
-          <entry key="txt" value="26" />
+          <entry key="java" value="1770" />
+          <entry key="txt" value="37" />
         </counts>
       </usages-collector>
     </session>
@@ -71,7 +68,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/TransactionProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="-120">
               <caret line="16" column="72" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
             </state>
           </provider>
@@ -80,25 +77,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/OrderBook.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
+            <state relative-caret-position="-113">
+              <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
               <folding>
-                <element signature="e#2410#2532#0" expanded="true" />
-                <element signature="e#2531#2532#0" expanded="true" />
-                <element signature="e#3770#4166#0" expanded="true" />
-                <element signature="e#4165#4166#0" expanded="true" />
-                <element signature="e#4349#4350#0" expanded="true" />
-                <element signature="e#4413#4414#0" expanded="true" />
+                <element signature="e#2443#2585#0" expanded="true" />
+                <element signature="e#2584#2585#0" expanded="true" />
+                <element signature="e#3205#3514#0" expanded="true" />
+                <element signature="e#3513#3514#0" expanded="true" />
+                <element signature="e#4168#4169#0" expanded="true" />
+                <element signature="e#4232#4233#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/Exchange.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/Order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+            <state relative-caret-position="-940">
+              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -191,6 +188,15 @@
               <item name="t2" type="b2602c69:ProjectViewProjectNode" />
               <item name="t2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ine5410" type="462c0819:PsiDirectoryNode" />
+              <item name="trade" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="t2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="t2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -218,7 +224,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542671166720" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542671406914" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -360,38 +366,45 @@
       <option name="project" value="LOCAL" />
       <updated>1542644745597</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Quase lá...">
+      <created>1542671305357</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1542671305357</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OrderBookTest - 2018.11.19 at 21h 34m 11s.xml">
+    <history-entry file="OrderBookTest - 2018.11.20 at 14h 07m 38s.xml">
       <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="TransactionProcessorTest - 2018.11.19 at 21h 35m 30s.xml">
-      <configuration name="TransactionProcessorTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="OrderBookTest - 2018.11.19 at 21h 35m 41s.xml">
+    <history-entry file="OrderBookTest - 2018.11.20 at 14h 09m 38s.xml">
       <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="OrderBookTest - 2018.11.19 at 21h 37m 22s.xml">
+    <history-entry file="OrderBookTest - 2018.11.20 at 14h 12m 48s.xml">
       <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="OrderBookTest - 2018.11.19 at 21h 37m 46s.xml">
+    <history-entry file="OrderBookTest - 2018.11.20 at 14h 13m 01s.xml">
       <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="OrderBookTest - 2018.11.19 at 21h 38m 55s.xml">
+    <history-entry file="OrderBookTest - 2018.11.20 at 14h 13m 18s.xml">
       <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="OrderBookTest - 2018.11.19 at 21h 40m 01s.xml">
+    <history-entry file="OrderBookTest - 2018.11.20 at 14h 21m 41s.xml">
       <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="OrderBookTest - 2018.11.19 at 21h 42m 47s.xml">
+    <history-entry file="OrderBookTest - 2018.11.20 at 14h 22m 23s.xml">
       <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="OrderBookTest - 2018.11.19 at 21h 43m 52s.xml">
+    <history-entry file="OrderBookTest - 2018.11.20 at 14h 23m 14s.xml">
       <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="OrderBookTest - 2018.11.19 at 21h 45m 55s.xml">
+    <history-entry file="OrderBookTest - 2018.11.20 at 14h 23m 50s.xml">
+      <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="OrderBookTest - 2018.11.20 at 14h 24m 28s.xml">
       <configuration name="OrderBookTest" configurationId="AndroidJUnit" />
     </history-entry>
   </component>
@@ -399,7 +412,7 @@
     <frame x="0" y="23" width="1360" height="719" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28386605" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28843227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -408,7 +421,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32879046" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32879046" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -433,7 +446,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Simplificando" />
     <MESSAGE value="Consertando" />
-    <option name="LAST_COMMIT_MESSAGE" value="Consertando" />
+    <MESSAGE value="Quase lá..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Quase lá..." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/bank/Investor.java">
@@ -486,10 +500,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/Order.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/ufsc/ine5410/OrderBookTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="307">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
@@ -500,38 +514,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/TransactionProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="72" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/br/ufsc/ine5410/OrderBookTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/Exchange.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
+        <state relative-caret-position="320">
           <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-940">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/TransactionProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="16" column="72" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/ine5410/trade/OrderBook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
+        <state relative-caret-position="-113">
+          <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
           <folding>
-            <element signature="e#2410#2532#0" expanded="true" />
-            <element signature="e#2531#2532#0" expanded="true" />
-            <element signature="e#3770#4166#0" expanded="true" />
-            <element signature="e#4165#4166#0" expanded="true" />
-            <element signature="e#4349#4350#0" expanded="true" />
-            <element signature="e#4413#4414#0" expanded="true" />
+            <element signature="e#2443#2585#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
+            <element signature="e#3205#3514#0" expanded="true" />
+            <element signature="e#3513#3514#0" expanded="true" />
+            <element signature="e#4168#4169#0" expanded="true" />
+            <element signature="e#4232#4233#0" expanded="true" />
           </folding>
         </state>
       </provider>

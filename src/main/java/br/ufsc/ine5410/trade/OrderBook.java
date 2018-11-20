@@ -58,7 +58,6 @@ public class OrderBook extends Thread implements AutoCloseable {
             order.notifyCancellation();
             return;
         }
-        closedLock.unlock();
         lock.lock();
         (order.getType() == BUY ? buyOrders : sellOrders).add(order);
         lock.unlock();
@@ -69,6 +68,7 @@ public class OrderBook extends Thread implements AutoCloseable {
                 tryMatch();
             }
         });
+        closedLock.unlock();
     }
 
     private void tryMatch() {
@@ -87,13 +87,20 @@ public class OrderBook extends Thread implements AutoCloseable {
             if (finalSell.getPrice() <= finalBuy.getPrice()) {
                 finalSell.notifyProcessing();
                 finalBuy.notifyProcessing();
-                executorService.execute(new Runnable() {
-                    @Override
-                    public void run() {
-                        Transaction trans = new Transaction(finalSell, finalBuy);
-                        transactionProcessor.process(OrderBook.this, trans);
-                    }
-                });
+                if(!comparaClosed()) {
+                    executorService.execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            Transaction trans = new Transaction(finalSell, finalBuy);
+                            transactionProcessor.process(OrderBook.this, trans);
+                        }
+                    });
+                    closedLock.unlock();
+                }else {
+                    closedLock.unlock();
+                    finalSell.notifyCancellation();
+                    finalBuy.notifyCancellation();
+                }
             } else {
                 break;
             }
@@ -129,17 +136,17 @@ public class OrderBook extends Thread implements AutoCloseable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        //any future post() call will be a no-op
-
-        for (Order order : sellOrders) order.notifyCancellation();
-        sellOrders.clear();
-        for (Order order : buyOrders) order.notifyCancellation();
-        buyOrders.clear();
         tryMatchExecutor.shutdown();
         try {
             tryMatchExecutor.awaitTermination(Long.MAX_VALUE, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        //any future post() call will be a no-op
+
+        for (Order order : sellOrders) order.notifyCancellation();
+        sellOrders.clear();
+        for (Order order : buyOrders) order.notifyCancellation();
+        buyOrders.clear();
     }
 }
